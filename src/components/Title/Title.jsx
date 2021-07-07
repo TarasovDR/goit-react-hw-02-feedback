@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import s from './Title.module.css';
+import { SectionTitle } from './Title.styled';
 
 const Title = ({ text }) => {
-  return <h2 className={s.title}>{text}</h2>;
+  return <SectionTitle>{text}</SectionTitle>;
 };
 
 Title.defaultProps = {

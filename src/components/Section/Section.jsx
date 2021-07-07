@@ -1,12 +1,12 @@
-import Title from "components/Title/Title";
-import s from "./Section.module.css";
+import Title from 'components/Title/Title';
+import { Wrapper } from './Section.styled';
 
 const Section = ({ text, children }) => {
   return (
-    <section className={s.section}>
+    <Wrapper>
       {text && <Title text={text} />}
       {children}
-    </section>
+    </Wrapper>
   );
 };
 
