@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
-import FeedbackOptions from 'components/FeedbackOptions/FeedbackOptions';
-import Notification from 'components/Notification/Notification';
-import Section from 'components/Section/Section';
-import Statistics from 'components/Statistics/Statistics';
+import FeedbackOptions from 'components/FeedbackOptions';
+import Notification from 'components/Notification';
+import Section from 'components/Section';
+import Statistics from 'components/Statistics';
 
 class App extends Component {
+  static defaultProps = {
+    defaultGood: 0,
+    defaultNeutral: 0,
+    defaultBad: 0,
+  };
+
   state = {
-    good: 0,
-    neutral: 0,
-    bad: 0,
+    good: this.props.defaultGood,
+    neutral: this.props.defaultNeutral,
+    bad: this.props.defaultBad,
   };
 
   handleClick = e => {
